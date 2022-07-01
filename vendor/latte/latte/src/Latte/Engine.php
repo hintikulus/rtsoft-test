@@ -17,8 +17,8 @@ class Engine
 {
 	use Strict;
 
-	public const VERSION = '2.10.8';
-	public const VERSION_ID = 21008;
+	public const VERSION = '2.11.5';
+	public const VERSION_ID = 21105;
 
 	/** Content types */
 	public const
@@ -137,6 +137,10 @@ class Engine
 	 */
 	public function compile(string $name): string
 	{
+		if ($this->sandboxed && !$this->policy) {
+			throw new \LogicException('In sandboxed mode you need to set a security policy.');
+		}
+
 		foreach ($this->onCompile ?: [] as $cb) {
 			(Helpers::checkCallback($cb))($this);
 		}
@@ -154,6 +158,7 @@ class Engine
 			$code = $this->getCompiler()
 				->setContentType($this->contentType)
 				->setFunctions(array_keys((array) $this->functions))
+				->setFilters($this->filters->_origNames)
 				->setPolicy($this->sandboxed ? $this->policy : null)
 				->compile($tokens, $this->getTemplateClass($name), $comment, $this->strictTypes);
 
@@ -278,7 +283,13 @@ class Engine
 
 	public function getTemplateClass(string $name): string
 	{
-		$key = serialize([$this->getLoader()->getUniqueId($name), self::VERSION, array_keys((array) $this->functions), $this->sandboxed]);
+		$key = serialize([
+			$this->getLoader()->getUniqueId($name),
+			self::VERSION,
+			array_keys((array) $this->functions),
+			$this->sandboxed,
+			$this->contentType,
+		]);
 		return 'Template' . substr(md5($key), 0, 10);
 	}
 
@@ -289,7 +300,9 @@ class Engine
 	 */
 	public function addFilter(?string $name, callable $callback)
 	{
-		if ($name !== null && !preg_match('#^[a-z]\w*$#iD', $name)) {
+		if ($name === null) {
+			trigger_error('For dynamic filters, use the addFilterLoader() where you pass a callback as a parameter that returns the filter callback.', E_USER_DEPRECATED);
+		} elseif (!preg_match('#^[a-z]\w*$#iD', $name)) {
 			throw new \LogicException("Invalid filter name '$name'.");
 		}
 

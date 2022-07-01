@@ -109,18 +109,14 @@ class Template
 	 */
 	public function getParameters(): array
 	{
-		$params = $this->params;
-		unset($params['_l'], $params['_g']);
-		return $params;
+		return $this->params;
 	}
 
 
-	/**
-	 * Returns parameter.
-	 * @return mixed
-	 */
+	/** @deprecated */
 	public function getParameter(string $name)
 	{
+		trigger_error(__METHOD__ . '() is deprecated, use getParameters()', E_USER_DEPRECATED);
 		if (!array_key_exists($name, $this->params)) {
 			trigger_error("The variable '$name' does not exist in template.", E_USER_NOTICE);
 		}
@@ -194,8 +190,6 @@ class Template
 			$this->global->snippetDriver = new SnippetDriver($this->global->snippetBridge);
 		}
 		Filters::$xhtml = (bool) preg_match('#xml|xhtml#', static::CONTENT_TYPE);
-		$this->params['_l'] = new \stdClass; // old accumulators for back compatibility
-		$this->params['_g'] = $this->global;
 
 		if ($this->referenceType === 'import') {
 			if ($this->parentName) {

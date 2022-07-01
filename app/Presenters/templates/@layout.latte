@@ -1,19 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
+	<title>Evidence protuktů</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+	<link rel="stylesheet" href="{$basePath}/www/include/assets/datagrid/datagrid.css">
+	<link rel="stylesheet" href="{$basePath}/www/include/assets/datagrid/datagrid-spinners.css">
 </head>
 
 <body>
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+<div class="container">
+	<header class="d-flex justify-content-center py-3">
+		<h3>Testovací aplikace RTsoft – evidence produktů</h3>
+	</header>
+
+	{snippet flashMessages}
+
+		<div n:foreach="$flashes as $flash" n:class="alert, $flash->type, alert-dismissible, fade, show" role="alert">
+			{$flash->message}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Zavřít">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{/snippet}
 
 	{include content}
+</div>
+
+<div class="modal fade" id="modal">
+	<div class="modal-dialog">
+		<div class="modal-content" n:snippet="modal">
+			{ifset $modal}
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLiveLabel">
+						{ifset #modal-{$modal}-title}{include #"modal-{$modal}-title"}{/ifset}
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Zavřít">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					{ifset #modal-{$modal}-body}{include #"modal-{$modal}-body"}{/ifset}
+				</div>
+				{ifset #modal-{$modal}-footer}
+					<div class="modal-footer">
+						{include #"modal-{$modal}-footer"}
+					</div>
+				{/ifset}
+			{/ifset}
+		</div>
+	</div>
+</div>
 
 	{block scripts}
-	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+		<script src="{$basePath}/www/include/assets/nette/netteForms.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/nette.ajax.js@2.3.0/nette.ajax.js"></script>
+
+		<script src="{$basePath}/www/include/assets/datagrid/datagrid.js"></script>
+
+		<script src="{$basePath}/www/include/assets/datagrid/datagrid-instant-url-refresh.js"></script>
+
+		<script src="{$basePath}/www/include/assets/datagrid/datagrid-spinners.js"></script>
+
+		<script>
+			$.nette.ext('bs-modal', {
+
+				init: function() {
+					// if the modal has some content, show it when page is loaded
+					var $modal = $('#modal');
+					if ($modal.find('.modal-content').html().trim().length !== 0) {
+						$modal.modal('show');
+					}
+				},
+				success: function (jqXHR, status, settings) {
+
+					if (typeof settings.responseJSON.snippets != 'undefined') {
+						var $snippet = settings.responseJSON.snippets['snippet--modal'];
+					}
+					if (!$snippet) {
+						return;
+					}
+
+					var $modal = $('#modal');
+					if ($modal.find('.modal-content').html().trim().length !== 0) {
+						$modal.modal('show');
+					} else {
+						$modal.modal('hide');
+					}
+
+					$('.multi-select').selectpicker();
+				}
+
+
+			});
+		</script>
 	{/block}
 </body>
 </html>

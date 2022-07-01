@@ -19,7 +19,7 @@ use Tracy;
  */
 class TracyExtension extends Nette\DI\CompilerExtension
 {
-	private const ERROR_SEVERITY_PATTERN = 'E_(?:ALL|PARSE|STRICT|RECOVERABLE_ERROR|(?:CORE|COMPILE)_(?:ERROR|WARNING)|(?:USER_)?(?:ERROR|WARNING|NOTICE|DEPRECATED))';
+	private const ErrorSeverityPattern = 'E_(?:ALL|PARSE|STRICT|RECOVERABLE_ERROR|(?:CORE|COMPILE)_(?:ERROR|WARNING)|(?:USER_)?(?:ERROR|WARNING|NOTICE|DEPRECATED))';
 
 	/** @var bool */
 	private $debugMode;
@@ -37,21 +37,22 @@ class TracyExtension extends Nette\DI\CompilerExtension
 
 	public function getConfigSchema(): Nette\Schema\Schema
 	{
-		$errorSeverity = Expect::string()->pattern(self::ERROR_SEVERITY_PATTERN);
-		$errorSeverityExpr = Expect::string()->pattern('(' . self::ERROR_SEVERITY_PATTERN . '|[ &|~()])+');
+		$errorSeverity = Expect::string()->pattern(self::ErrorSeverityPattern);
+		$errorSeverityExpr = Expect::string()->pattern('(' . self::ErrorSeverityPattern . '|[ &|~()])+');
 
 		return Expect::structure([
 			'email' => Expect::anyOf(Expect::email(), Expect::listOf('email'))->dynamic(),
 			'fromEmail' => Expect::email()->dynamic(),
 			'emailSnooze' => Expect::string()->dynamic(),
 			'logSeverity' => Expect::anyOf(Expect::int(), $errorSeverityExpr, Expect::listOf($errorSeverity)),
-			'editor' => Expect::string()->dynamic(),
+			'editor' => Expect::type('string|null')->dynamic(),
 			'browser' => Expect::string()->dynamic(),
 			'errorTemplate' => Expect::string()->dynamic(),
 			'strictMode' => Expect::anyOf(Expect::bool(), Expect::int(), $errorSeverityExpr, Expect::listOf($errorSeverity)),
 			'showBar' => Expect::bool()->dynamic(),
 			'maxLength' => Expect::int()->dynamic(),
 			'maxDepth' => Expect::int()->dynamic(),
+			'maxItems' => Expect::int()->dynamic(),
 			'keysToHide' => Expect::array(null)->dynamic(),
 			'dumpTheme' => Expect::string()->dynamic(),
 			'showLocation' => Expect::bool()->dynamic(),
@@ -98,7 +99,7 @@ class TracyExtension extends Nette\DI\CompilerExtension
 
 		foreach ($options as $key => $value) {
 			if ($value !== null) {
-				static $tbl = [
+				$tbl = [
 					'keysToHide' => 'array_push(Tracy\Debugger::getBlueScreen()->keysToHide, ... ?)',
 					'fromEmail' => 'Tracy\Debugger::getLogger()->fromEmail = ?',
 					'emailSnooze' => 'Tracy\Debugger::getLogger()->emailSnooze = ?',

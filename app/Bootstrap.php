@@ -7,13 +7,13 @@ namespace App;
 use Nette\Bootstrap\Configurator;
 
 
-class Bootstrap
-{
-	public static function boot(): Configurator
-	{
+class Bootstrap {
+
+	public static function boot(): Configurator {
 		$configurator = new Configurator;
 		$appDir = dirname(__DIR__);
 
+        //$configurator->setDebugMode(true);
 		//$configurator->setDebugMode('secret@23.75.345.200'); // enable for your remote IP
 		$configurator->enableTracy($appDir . '/log');
 

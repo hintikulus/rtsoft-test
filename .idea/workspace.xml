@@ -5,17 +5,186 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b29316d5-d498-4ce5-b4f8-3b269a4fdfd1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Model/CurrencyConversion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Utils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/components/ItemFormFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/datagrid/template.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/.github/.kodiak.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/.github/workflows/main.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/CSVResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Adapter/Adapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Adapter/CallbackAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Adapter/ProcessAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Adapter/StdoutAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Buffer/Buffer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Buffer/FileBuffer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/Buffer/ProcessBuffer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/FlyFileResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/Fly/FlyResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/ImageResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/JsonPrettyResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/PSR7StreamResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/StringResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/Response/XmlResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/UI/BasePresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/UI/NullComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/UI/NullControl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/contributte/application/src/UI/Presenter/StructuredTemplates.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.github/.kodiak.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.github/workflows/codesniffer.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.github/workflows/coverage.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.github/workflows/phpstan.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.github/workflows/tests.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/.scrutinizer.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/assets/datagrid-instant-url-refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/assets/datagrid-spinners.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/assets/datagrid-spinners.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/assets/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/assets/datagrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/AggregationFunction/FunctionSum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/AggregationFunction/IAggregatable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/AggregationFunction/IAggregationFunction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/AggregationFunction/IMultipleAggregationFunction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/AggregationFunction/ISingleColumnAggregationFunction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/AggregationFunction/TDataGridAggregationFunction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/Action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/Action/Confirmation/CallbackConfirmation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/Action/Confirmation/IConfirmation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/Action/Confirmation/StringConfirmation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ActionCallback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/Column.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ColumnDateTime.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ColumnLink.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ColumnNumber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ColumnStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ColumnText.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/FilterableColumn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/ItemDetail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/MultiAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Column/Renderer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/ColumnsSummary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Components/DataGridPaginator/DataGridPaginator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Components/DataGridPaginator/templates/data_grid_paginator.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/CsvDataModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataGrid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/ApiDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/ArrayDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/DibiFluentDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/DibiFluentMssqlDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/DibiFluentPostgreDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/DoctrineCollectionDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/DoctrineDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/ElasticsearchDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/FilterableDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/IDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/NetteDatabaseTableDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/NetteDatabaseTableMssqlDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/NextrasDataSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/DataSource/SearchParamsBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridActionCallbackException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridArrayDataSourceException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridColumnException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridColumnNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridColumnRendererException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridColumnStatusException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridDateTimeHelperException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridFilterNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridFilterRangeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridGroupActionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridHasToBeAttachedToPresenterComponentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridItemDetailException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridLinkCreationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Exception/DataGridWrongDataSourceException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Export/Export.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Export/ExportCsv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/Filter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/FilterDate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/FilterDateRange.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/FilterMultiSelect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/FilterRange.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/FilterSelect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/FilterText.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/IFilterDate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/OneColumnFilter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Filter/SubmitButton.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupActionCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupButtonAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupMultiSelectAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupSelectAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupTextAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/GroupAction/GroupTextareaAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/InlineEdit/InlineAdd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/InlineEdit/InlineEdit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Localization/SimpleTranslator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Row.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Status/Option.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Toolbar/ToolbarButton.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonCaret.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonIcon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonRenderer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonText.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonTitle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TButtonTryAddIcon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TLink.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Traits/TRenderCondition.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Utils/ArraysHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Utils/DateTimeHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Utils/ItemDetailForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Utils/NetteDatabaseSelectionHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Utils/PropertyAccessHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/Utils/Sorting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/column_multi_action.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/column_status.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid_filter_date.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid_filter_daterange.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid_filter_range.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid_filter_select.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid_filter_text.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ublaboo/datagrid/src/templates/datagrid_tree.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/datagrid/datagrid-instant-url-refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/datagrid/datagrid-spinners.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/datagrid/datagrid-spinners.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/datagrid/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/datagrid/datagrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/nette/netteForms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/include/assets/nette/netteForms.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.neon" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,28 +216,52 @@
       <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
       <path value="$PROJECT_DIR$/vendor/nette/caching" />
       <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/contributte/application" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/ublaboo/datagrid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
     </include_path>
   </component>
   <component name="ProjectId" id="2BCx5VGjz0JqWu1VM67H3nPvggM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "W:/rtsoft-test",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "last_opened_file_path": "W:/BP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\rtsoft-test\www\include\assets\nette" />
+      <recent name="W:\rtsoft-test\www\include\assets\datagrid" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,10 +271,28 @@
       <option name="presentableId" value="Default" />
       <updated>1656423687114</updated>
       <workItem from="1656423688949" duration="1790000" />
+      <workItem from="1656463966876" duration="941000" />
+      <workItem from="1656467935349" duration="1579000" />
+      <workItem from="1656491095716" duration="27412000" />
+      <workItem from="1656568894898" duration="53116000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
